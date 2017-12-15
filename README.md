@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/elasticfence/elasticsearch-http-user-auth.svg?branch=5.1.2)](https://travis-ci.org/elasticfence/elasticsearch-http-user-auth)
+[![Build Status](https://travis-ci.org/elasticfence/elasticsearch-http-user-auth.svg?branch=5.2.2)](https://travis-ci.org/elasticfence/elasticsearch-http-user-auth)
 
 ![](http://i.imgur.com/OFFgrm8.png?1)
 
@@ -6,17 +6,17 @@
 
 Elasticsearch user authentication plugin with http basic auth and IP ACL
 
-This plugin provides user authentication APIs and a User management web console. 
+This plugin provides user authentication APIs and a User management web console.
 
-## Installation 
+## Installation
 <pre>
-bin/plugin install https://raw.githubusercontent.com/elasticfence/elasticsearch-http-user-auth/5.1.2/jar/elasticfence-5.1.2-SNAPSHOT.zip
+bin/plugin install https://raw.githubusercontent.com/elasticfence/elasticsearch-http-user-auth/5.2.2/jar/elasticfence-5.2.2-SNAPSHOT.zip
 </pre>
 
 #### Build with Maven
 <pre>
 mvn package clean
-bin/plugin install file:///path/to/repo/jar/elasticfence-5.1.2-SNAPSHOT.zip
+bin/plugin install file:///path/to/repo/jar/elasticfence-5.2.2-SNAPSHOT.zip
 </pre>
 
 ## Configuration
@@ -64,7 +64,7 @@ elasticsearch.username: <b>your_custom_username</b>
 elasticsearch.password: <b>your_custom_password</b>
 </pre>
 
-Add permissions to your <b>kibana</b> users using regex filters: 
+Add permissions to your <b>kibana</b> users using regex filters:
 <pre>
 /index.*,/_.*,/.kibana,/
 </pre>
@@ -79,7 +79,7 @@ bin/kibana plugin --install kibana-auth-plugin -u https://github.com/elasticfenc
 ---------------
 
 ## Add username and password on HTTP requests
-The authentication method of this plugin is Basic Authentication. Therefore, you should add your username and password on URL string. For example: 
+The authentication method of this plugin is Basic Authentication. Therefore, you should add your username and password on URL string. For example:
 
 <pre>
 http://root:rootpassword@your.elasticsearch.hostname:9200/
@@ -107,9 +107,9 @@ curl -u root:rootpassword http://your.elasticsearch.hostname:9200/
 
 Plugins using ES's REST API also have to be set root password in their configurations.
 
-The ways of configuring Marvel and Kibana 4 are below: 
+The ways of configuring Marvel and Kibana 4 are below:
 
-#### Marvel 
+#### Marvel
 elasticsearch.yml:
 <pre>
 marvel.agent.exporter.es.hosts: ["root:rootpassword@127.0.0.1:9200"]
@@ -145,7 +145,7 @@ http://your.elasticsearch.hostname:9200/_httpuserauth?mode=deleteuser&username=a
 http://your.elasticsearch.hostname:9200/_httpuserauth?mode=list
 </pre>
 ```javascript
-[{ 
+[{
   "username":"admin",
   "password":"7080bfe27990021c562398e79823h920e9a38aa5d3b10c5ff5d8c498305",
   "indices":["/_*"],

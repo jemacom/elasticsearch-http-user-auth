@@ -11,7 +11,7 @@
 <!--     <packaging>pom</packaging> -->
     <description>Elasticsearch http basic auth and IP ACL plugin</description>
     <url>https://github.com/elasticfence/elasticsearch-http-user-auth/</url>
-    
+
     <licenses>
         <license>
             <name>Apache License 2.0</name>
@@ -24,7 +24,7 @@
         <connection>scm:git:git://github.com/elasticfence/elasticsearch-http-user-auth.git</connection>
         <developerConnection>scm:git:git://github.com/elasticfence/elasticsearch-http-user-auth.git</developerConnection>
     </scm>
-    
+
     <developers>
       <developer>
         <name>Tom Search</name>
@@ -40,7 +40,7 @@
 	<timezone>Europe/Amsterdam</timezone>
       </developer>
     </developers>
-    
+
     <properties>
         <elasticsearch.version>5.1.2</elasticsearch.version>
         <elasticsearch.plugin.name>elasticfence</elasticsearch.plugin.name>
